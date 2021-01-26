@@ -1854,7 +1854,9 @@ function player.update(self)
 			if self.state==100 then
 				last_time=level_time
 				level_time=0
-				level_checkpoint=nil
+				if not cpmode then
+					level_checkpoint=nil
+				end
 				collected={}
 			elseif cpmode then
 				last_time,level_time=0,0
