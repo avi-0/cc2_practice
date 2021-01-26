@@ -131,6 +131,7 @@ function _update()
 			end
 		else
 			level_index=max(1,level_index-1)
+			level_checkpoint=nil
 		end
 		goto_level(level_index,true)
 		level_time,last_time=0,0
@@ -144,6 +145,7 @@ function _update()
 			end
 		else
 			level_index=min(8,level_index+1)
+			level_checkpoint=nil
 		end
 		goto_level(level_index,true)
 		level_time,last_time=0,0
